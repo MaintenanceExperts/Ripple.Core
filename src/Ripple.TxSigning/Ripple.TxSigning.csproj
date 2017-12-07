@@ -2,13 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <SignAssembly>false</SignAssembly>
-    <AssemblyOriginatorKeyFile>ripple-dot-net-key.pfx</AssemblyOriginatorKeyFile>
+    <SignAssembly>false</SignAssembly>    
     <DelaySign>false</DelaySign>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Ripple.NetCore</PackageId>
-    <Authors />
-    <Company>Ripple</Company>
+    <Authors>Chris Williams and Ripple Inc.</Authors>    
+    <Company>CloudScope, LLC</Company>
+    <Product>Ripple.NetCore</Product>
+    <PackageLicenseUrl>https://github.com/chriswill/ripple-netcore/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/chriswill/ripple-netcore</RepositoryUrl>
+    <Description>Ripple.NetCore is a set of .Net libraries for working with the Ripple network.  The only supported functionality at this time is offline signing of transactions.</Description>
+    <PackageProjectUrl>https://github.com/chriswill/ripple-netcore</PackageProjectUrl>
+    <PackageTags>Cryptocurrencies;XRP;Ripple</PackageTags>    
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,5 +24,5 @@
     <ProjectReference Include="..\Ripple.Core\Ripple.Core.csproj" />
     <ProjectReference Include="..\Ripple.Signing\Ripple.Signing.csproj" />
   </ItemGroup>
-
+  
 </Project>
