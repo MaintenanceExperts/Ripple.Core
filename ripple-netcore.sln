@@ -15,13 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ripple.TxSigning", "src\Rip
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3667999F-1C33-429A-A993-E24D835051BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ripple.Address.Tests", "test\Ripple.Address.Tests\Ripple.Address.Tests.csproj", "{71C44EA7-EA40-4F48-859F-EE4520C738A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ripple.Address.Tests", "test\Ripple.Address.Tests\Ripple.Address.Tests.csproj", "{71C44EA7-EA40-4F48-859F-EE4520C738A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ripple.Core.Tests", "test\Ripple.Core.Tests\Ripple.Core.Tests.csproj", "{75AAB24C-DCB0-4C27-85C2-A94C41BA396F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ripple.Core.Tests", "test\Ripple.Core.Tests\Ripple.Core.Tests.csproj", "{75AAB24C-DCB0-4C27-85C2-A94C41BA396F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ripple.Signing.Tests", "test\Ripple.Signing.Tests\Ripple.Signing.Tests.csproj", "{51FADCAC-5888-4B02-AB0D-BFDDCE396B81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ripple.Signing.Tests", "test\Ripple.Signing.Tests\Ripple.Signing.Tests.csproj", "{51FADCAC-5888-4B02-AB0D-BFDDCE396B81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ripple.TxSigning.Tests", "test\Ripple.TxSigning.Tests\Ripple.TxSigning.Tests.csproj", "{FBA070B8-0606-49C2-8940-D2F228F51940}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ripple.TxSigning.Tests", "test\Ripple.TxSigning.Tests\Ripple.TxSigning.Tests.csproj", "{FBA070B8-0606-49C2-8940-D2F228F51940}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
