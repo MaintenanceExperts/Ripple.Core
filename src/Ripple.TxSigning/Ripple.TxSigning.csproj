@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>ripple-dot-net-key.pfx</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Ripple.NetCore</PackageId>
+    <Authors />
+    <Company>Ripple</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ripple.Core\Ripple.Core.csproj" />
+    <ProjectReference Include="..\Ripple.Signing\Ripple.Signing.csproj" />
+  </ItemGroup>
+
+</Project>
