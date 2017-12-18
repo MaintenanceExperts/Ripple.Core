@@ -1,8 +1,15 @@
 **Important!**
 
 This is a port of the original Ripple.Net solution found here: https://github.com/ripple/ripple-dot-net.
-There have been no changes or updates made other than porting to .NET Core.  There are likely bugs and other improvements
+There have been no changes or updates made other than porting to .NET Standard.  There are likely bugs and other improvements
 that are required, since the original repository hasn't been updated in over two years.
+
+## Get Ripple.NetCore
+
+Install from Nuget: [https://www.nuget.org/packages/Ripple.NetCore](https://www.nuget.org/packages/Ripple.NetCore)
+
+Or in the package manager console:
+PM> Install-Package Ripple.NetCore -Version 1.0.2
 
 ---
 
