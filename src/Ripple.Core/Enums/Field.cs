@@ -112,6 +112,7 @@ namespace Ripple.Core.Enums
         public static readonly Uint32Field SignerQuorum = new Uint32Field(nameof(SignerQuorum), 35);
         public static readonly Uint32Field CancelAfter = new Uint32Field(nameof(CancelAfter), 36);
         public static readonly Uint32Field FinishAfter = new Uint32Field(nameof(FinishAfter), 37);
+        public static readonly Uint32Field SettleDelay = new Uint32Field(nameof(SettleDelay), 38);
 
         public static readonly Uint64Field IndexNext = new Uint64Field(nameof(IndexNext), 1);
         public static readonly Uint64Field IndexPrevious = new Uint64Field(nameof(IndexPrevious), 2);
@@ -160,7 +161,7 @@ namespace Ripple.Core.Enums
         public static readonly AmountField SendMax = new AmountField(nameof(SendMax), 9);
         public static readonly AmountField DeliverMin = new AmountField(nameof(DeliverMin), 10);
         public static readonly AmountField MinimumOffer = new AmountField(nameof(MinimumOffer), 16);
-        public static readonly AmountField RippleEscrow = new AmountField(nameof(RippleEscrow), 17);
+        
         // Added in rippled commit: e7f0b8eca69dd47419eee7b82c8716b3aa5a9e39
         public static readonly AmountField DeliveredAmount = new AmountField(nameof(DeliveredAmount), 18);
         // These are auxiliary fields
@@ -206,6 +207,9 @@ namespace Ripple.Core.Enums
         public static readonly StObjectField Memo = new StObjectField(nameof(Memo), 10);
         public static readonly StObjectField SignerEntry = new StObjectField(nameof(SignerEntry), 11);
         public static readonly StObjectField Signer = new StObjectField(nameof(Signer), 16);
+        public static readonly StObjectField Condition = new StObjectField(nameof(Condition), 20);
+        public static readonly StObjectField Fulfillment = new StObjectField(nameof(Fulfillment), 21);
+        public static readonly StObjectField Channel = new StObjectField(nameof(Channel), 22);
 
         public static readonly StArrayField ArrayEndMarker = new StArrayField(nameof(ArrayEndMarker), 1);
         // ReSharper disable once RedundantArgumentNameForLiteralExpression

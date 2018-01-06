@@ -145,6 +145,13 @@ namespace Ripple.Core.Transactions
                     [Field.LedgerSequence] = Requirement.Optional,
                     [Field.Amendment] = Requirement.Required
                 },
+                [TransactionType.EscrowFinish] = new TxFormat
+                    {
+                        [Field.Owner] = Requirement.Required,
+                        [Field.OfferSequence] = Requirement.Required,
+                        [Field.Condition] = Requirement.Optional,
+                        [Field.Fulfillment] = Requirement.Optional
+                    },
                 [TransactionType.SetFee] = new TxFormat
                 {
                     [Field.LedgerSequence] = Requirement.Optional,
@@ -152,38 +159,7 @@ namespace Ripple.Core.Transactions
                     [Field.ReferenceFeeUnits] = Requirement.Required,
                     [Field.ReserveBase] = Requirement.Required,
                     [Field.ReserveIncrement] = Requirement.Required
-                },
-                [TransactionType.SuspendedPaymentCreate] = new TxFormat
-                {
-                    [Field.Destination] = Requirement.Required,
-                    [Field.Amount] = Requirement.Required,
-                    [Field.Digest] = Requirement.Optional,
-                    [Field.CancelAfter] = Requirement.Optional,
-                    [Field.FinishAfter] = Requirement.Optional,
-                    [Field.DestinationTag] = Requirement.Optional
-                },
-                [TransactionType.SuspendedPaymentFinish] = new TxFormat
-                {
-                    [Field.Owner] = Requirement.Required,
-                    [Field.OfferSequence] = Requirement.Required,
-                    [Field.Method] = Requirement.Optional,
-                    [Field.Digest] = Requirement.Optional,
-                    [Field.Proof] = Requirement.Optional
-                },
-                [TransactionType.SuspendedPaymentCancel] = new TxFormat
-                {
-                    [Field.Owner] = Requirement.Required,
-                    [Field.OfferSequence] = Requirement.Required
-                },
-                [TransactionType.TicketCreate] = new TxFormat
-                {
-                    [Field.Target] = Requirement.Optional,
-                    [Field.Expiration] = Requirement.Optional
-                },
-                [TransactionType.TicketCancel] = new TxFormat
-                {
-                    [Field.TicketID] = Requirement.Required
-                },
+                },                
                 // The SignerEntries are optional because a SignerList is deleted by
                 // setting the SignerQuorum to zero and omitting SignerEntries.
                 [TransactionType.SignerListSet] = new TxFormat
