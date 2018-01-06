@@ -145,13 +145,27 @@ namespace Ripple.Core.Transactions
                     [Field.LedgerSequence] = Requirement.Optional,
                     [Field.Amendment] = Requirement.Required
                 },
+                [TransactionType.EscrowCreate] = new TxFormat
+                {
+                    [Field.Amount] = Requirement.Required,
+                    [Field.Destination] = Requirement.Required,
+                    [Field.CancelAfter] = Requirement.Optional,
+                    [Field.FinishAfter] = Requirement.Optional,
+                    [Field.Condition] = Requirement.Optional,
+                    [Field.DestinationTag] = Requirement.Optional,
+                    [Field.SourceTag] = Requirement.Optional
+                },
+                [TransactionType.EscrowCancel] = new TxFormat
+                {
+                    [Field.OfferSequence] = Requirement.Required
+                },
                 [TransactionType.EscrowFinish] = new TxFormat
-                    {
-                        [Field.Owner] = Requirement.Required,
-                        [Field.OfferSequence] = Requirement.Required,
-                        [Field.Condition] = Requirement.Optional,
-                        [Field.Fulfillment] = Requirement.Optional
-                    },
+                {
+                    [Field.Owner] = Requirement.Required,
+                    [Field.OfferSequence] = Requirement.Required,
+                    [Field.Condition] = Requirement.Optional,
+                    [Field.Fulfillment] = Requirement.Optional
+                },
                 [TransactionType.SetFee] = new TxFormat
                 {
                     [Field.LedgerSequence] = Requirement.Optional,
