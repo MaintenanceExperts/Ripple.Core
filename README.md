@@ -9,7 +9,7 @@ that are required, since the original repository hasn't been updated in over two
 Install from Nuget: [https://www.nuget.org/packages/Ripple.NetCore](https://www.nuget.org/packages/Ripple.NetCore)
 
 Or in the package manager console:
-PM> Install-Package Ripple.NetCore -Version 1.0.2
+PM> Install-Package Ripple.NetCore
 
 ---
 
