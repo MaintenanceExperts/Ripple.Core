@@ -151,6 +151,7 @@ namespace Ripple.Core.Enums
         public static readonly Hash256Field TicketID = new Hash256Field(nameof(TicketID), 20);
         public static readonly Hash256Field Digest = new Hash256Field(nameof(Digest), 21);
         public static readonly Hash256Field Channel = new Hash256Field(nameof(Channel), 22);
+        public static readonly Hash256Field ConsensusHash = new Hash256Field(nameof(ConsensusHash), 23);
         // ReSharper disable once InconsistentNaming
         public static readonly Hash256Field hash = new Hash256Field(nameof(hash), 257);
         // ReSharper disable once InconsistentNaming
@@ -167,7 +168,8 @@ namespace Ripple.Core.Enums
         public static readonly AmountField SendMax = new AmountField(nameof(SendMax), 9);
         public static readonly AmountField DeliverMin = new AmountField(nameof(DeliverMin), 10);
         public static readonly AmountField MinimumOffer = new AmountField(nameof(MinimumOffer), 16);
-        
+        public static readonly AmountField RippleEscrow = new AmountField(nameof(RippleEscrow), 17);
+
         // Added in rippled commit: e7f0b8eca69dd47419eee7b82c8716b3aa5a9e39
         public static readonly AmountField DeliveredAmount = new AmountField(nameof(DeliveredAmount), 18);
         // These are auxiliary fields
@@ -230,6 +232,9 @@ namespace Ripple.Core.Enums
         public static readonly Uint8Field CloseResolution = new Uint8Field(nameof(CloseResolution), 1);
         public static readonly Uint8Field Method = new Uint8Field(nameof(Method), 2);
         public static readonly EngineResultField TransactionResult = new EngineResultField(nameof(TransactionResult), 3);
+
+        //uncommon
+        public static readonly Uint8Field TickSize = new Uint8Field(nameof(TickSize), 16);
 
         public static readonly Hash160Field TakerPaysCurrency = new Hash160Field(nameof(TakerPaysCurrency), 1);
         public static readonly Hash160Field TakerPaysIssuer = new Hash160Field(nameof(TakerPaysIssuer), 2);

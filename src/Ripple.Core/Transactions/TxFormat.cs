@@ -7,6 +7,7 @@ using Ripple.Core.Types;
 
 namespace Ripple.Core.Transactions
 {
+    //https://github.com/ripple/rippled/blob/112a863e7346793234c973e97818ced4c6e36867/src/ripple/protocol/impl/TxFormats.cpp
     public class TxFormat : Dictionary<Field, TxFormat.Requirement>
     {
         public enum Requirement
@@ -107,7 +108,8 @@ namespace Ripple.Core.Transactions
                     [Field.Domain] = Requirement.Optional,
                     [Field.TransferRate] = Requirement.Optional,
                     [Field.SetFlag] = Requirement.Optional,
-                    [Field.ClearFlag] = Requirement.Optional
+                    [Field.ClearFlag] = Requirement.Optional,
+                    [Field.TickSize] = Requirement.Optional
                 },
                 [TransactionType.TrustSet] = new TxFormat
                 {
@@ -140,23 +142,19 @@ namespace Ripple.Core.Transactions
                     [Field.DestinationTag] = Requirement.Optional,
                     [Field.DeliverMin] = Requirement.Optional
                 },
-                [TransactionType.EnableAmendment] = new TxFormat
-                {
-                    [Field.LedgerSequence] = Requirement.Optional,
-                    [Field.Amendment] = Requirement.Required
-                },
+
                 [TransactionType.EscrowCreate] = new TxFormat
                 {
                     [Field.Amount] = Requirement.Required,
                     [Field.Destination] = Requirement.Required,
-                    [Field.CancelAfter] = Requirement.Optional,
-                    [Field.FinishAfter] = Requirement.Optional,
                     [Field.Condition] = Requirement.Optional,
-                    [Field.DestinationTag] = Requirement.Optional,
-                    [Field.SourceTag] = Requirement.Optional
+                    [Field.CancelAfter] = Requirement.Optional,
+                    [Field.FinishAfter] = Requirement.Optional,                    
+                    [Field.DestinationTag] = Requirement.Optional,                    
                 },
                 [TransactionType.EscrowCancel] = new TxFormat
                 {
+                    [Field.Owner] = Requirement.Required,
                     [Field.OfferSequence] = Requirement.Required
                 },
                 [TransactionType.EscrowFinish] = new TxFormat
@@ -166,6 +164,11 @@ namespace Ripple.Core.Transactions
                     [Field.Condition] = Requirement.Optional,
                     [Field.Fulfillment] = Requirement.Optional
                 },
+                [TransactionType.EnableAmendment] = new TxFormat
+                {
+                    [Field.LedgerSequence] = Requirement.Optional,
+                    [Field.Amendment] = Requirement.Required
+                },
                 [TransactionType.SetFee] = new TxFormat
                 {
                     [Field.LedgerSequence] = Requirement.Optional,
@@ -173,13 +176,45 @@ namespace Ripple.Core.Transactions
                     [Field.ReferenceFeeUnits] = Requirement.Required,
                     [Field.ReserveBase] = Requirement.Required,
                     [Field.ReserveIncrement] = Requirement.Required
-                },                
+                },  
+                [TransactionType.TicketCreate] = new TxFormat
+                {
+                    [Field.Target] = Requirement.Optional,
+                    [Field.Expiration] = Requirement.Optional
+                },
+                [TransactionType.TicketCancel] = new TxFormat
+                {
+                    [Field.TicketID] = Requirement.Required
+                },
                 // The SignerEntries are optional because a SignerList is deleted by
                 // setting the SignerQuorum to zero and omitting SignerEntries.
                 [TransactionType.SignerListSet] = new TxFormat
                 {
                     [Field.SignerQuorum] = Requirement.Required,
                     [Field.SignerEntries] = Requirement.Optional
+                },
+                [TransactionType.PaymentChannelCreate] = new TxFormat()
+                {
+                    [Field.Destination] = Requirement.Required,
+                    [Field.Amount] = Requirement.Required,
+                    [Field.SettleDelay] = Requirement.Required,
+                    [Field.PublicKey] = Requirement.Required,
+                    [Field.CancelAfter] = Requirement.Optional,
+                    [Field.DestinationTag] = Requirement.Optional
+                },
+                [TransactionType.PaymentChannelFund] = new TxFormat()
+                {
+                    [Field.Channel] = Requirement.Required,
+                    [Field.Amount] = Requirement.Required,
+                    [Field.Expiration] = Requirement.Optional
+                },
+                [TransactionType.PaymentChannelClaim] = new TxFormat()
+                {
+                    [Field.Channel] = Requirement.Required,
+                    [Field.Amount] = Requirement.Optional,
+                    [Field.Balance] = Requirement.Optional,
+                    [Field.Signature] = Requirement.Optional,
+                    [Field.PublicKey] = Requirement.Optional
                 }
             };
         }
