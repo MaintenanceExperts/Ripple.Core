@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json.Linq;
+using Ripple.Core.Binary;
 using Ripple.Core.Tests.Properties;
 using Ripple.Core.Types;
 using Ripple.Core.Util;
@@ -140,6 +141,14 @@ namespace Ripple.Core.Tests
                 return true;
             });
             Assert.AreEqual(array.Length, passed);
+        }
+
+        [TestMethod]
+        public void CanDeserializeEscrowTransaction()
+        {
+            string binary = "1200012280000000240000001C201B0055E830202421E4C840202521E376C061400000000098968068400000000000000C7321024B1C46885AD9DEEE7A413026D74BA6161C2F68FA9BD621022CF34CA00FB6FAEC7446304402201E931F36789387DF59058D34345D5EEBF2BD18159FEB8A8601E495054D4065F802200EBD2738EA138BA7C0D5AC07E02B950A84F563EF1AC94F8B4BCAA99595B402A48114656CFDA8B366CAFE7EDC195A6DE87921FB70C2318314A2D0815DD52160FF1979A60C50B00C09ECD669D4";
+            StObject stObject = StObject.FromHex(binary);
+            Assert.IsNotNull(stObject);          
         }
 
         private static void AssertAmountEqual(JToken expected, JToken actual)

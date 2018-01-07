@@ -116,14 +116,14 @@ namespace Ripple.Core.Transactions
                     [Field.QualityOut] = Requirement.Optional
                 },
                 [TransactionType.OfferCreate] = new TxFormat
-                {
+                {                    
                     [Field.TakerPays] = Requirement.Required,
                     [Field.TakerGets] = Requirement.Required,
                     [Field.Expiration] = Requirement.Optional,
                     [Field.OfferSequence] = Requirement.Optional
                 },
                 [TransactionType.OfferCancel] = new TxFormat
-                {
+                {                    
                     [Field.OfferSequence] = Requirement.Required
                 },
                 [TransactionType.SetRegularKey] = new TxFormat
@@ -131,7 +131,7 @@ namespace Ripple.Core.Transactions
                     [Field.RegularKey] = Requirement.Optional
                 },
                 [TransactionType.Payment] = new TxFormat
-                {
+                {                    
                     [Field.Destination] = Requirement.Required,
                     [Field.Amount] = Requirement.Required,
                     [Field.SendMax] = Requirement.Optional,

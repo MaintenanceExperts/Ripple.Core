@@ -1,3 +1,5 @@
+using System;
+
 namespace Ripple.Core.Enums
 {
     public class Field : EnumItem
@@ -99,6 +101,8 @@ namespace Ripple.Core.Enums
         public static readonly Uint32Field BondAmount = new Uint32Field(nameof(BondAmount), 23);
         public static readonly Uint32Field LoadFee = new Uint32Field(nameof(LoadFee), 24);
         public static readonly Uint32Field OfferSequence = new Uint32Field(nameof(OfferSequence), 25);
+
+        [Obsolete]
         public static readonly Uint32Field FirstLedgerSequence = new Uint32Field(nameof(FirstLedgerSequence), 26); // Deprecated: do not use;
         // Added new semantics in 9486fc416ca7c59b8930b734266eed4d5b714c50
         public static readonly Uint32Field LastLedgerSequence = new Uint32Field(nameof(LastLedgerSequence), 27);
@@ -112,7 +116,8 @@ namespace Ripple.Core.Enums
         public static readonly Uint32Field SignerQuorum = new Uint32Field(nameof(SignerQuorum), 35);
         public static readonly Uint32Field CancelAfter = new Uint32Field(nameof(CancelAfter), 36);
         public static readonly Uint32Field FinishAfter = new Uint32Field(nameof(FinishAfter), 37);
-        public static readonly Uint32Field SettleDelay = new Uint32Field(nameof(SettleDelay), 38);
+        public static readonly Uint32Field SignerListID = new Uint32Field(nameof(SignerListID), 38);
+        public static readonly Uint32Field SettleDelay = new Uint32Field(nameof(SettleDelay), 39);
 
         public static readonly Uint64Field IndexNext = new Uint64Field(nameof(IndexNext), 1);
         public static readonly Uint64Field IndexPrevious = new Uint64Field(nameof(IndexPrevious), 2);
@@ -145,6 +150,7 @@ namespace Ripple.Core.Enums
         // ReSharper disable once InconsistentNaming
         public static readonly Hash256Field TicketID = new Hash256Field(nameof(TicketID), 20);
         public static readonly Hash256Field Digest = new Hash256Field(nameof(Digest), 21);
+        public static readonly Hash256Field Channel = new Hash256Field(nameof(Channel), 22);
         // ReSharper disable once InconsistentNaming
         public static readonly Hash256Field hash = new Hash256Field(nameof(hash), 257);
         // ReSharper disable once InconsistentNaming
@@ -186,7 +192,9 @@ namespace Ripple.Core.Enums
         public static readonly BlobField MemoType = new BlobField(nameof(MemoType), 12);
         public static readonly BlobField MemoData = new BlobField(nameof(MemoData), 13);
         public static readonly BlobField MemoFormat = new BlobField(nameof(MemoFormat), 14);
-        public static readonly BlobField Proof = new BlobField(nameof(Proof), 17);
+        public static readonly BlobField Fulfillment = new BlobField(nameof(Fulfillment), 16);
+        public static readonly BlobField Condition = new BlobField(nameof(Condition), 17);
+        public static readonly BlobField MasterSignature = new BlobField(nameof(MasterSignature), 18);
 
         public static readonly AccountIdField Account = new AccountIdField(nameof(Account), 1);
         public static readonly AccountIdField Owner = new AccountIdField(nameof(Owner), 2);
@@ -207,9 +215,7 @@ namespace Ripple.Core.Enums
         public static readonly StObjectField Memo = new StObjectField(nameof(Memo), 10);
         public static readonly StObjectField SignerEntry = new StObjectField(nameof(SignerEntry), 11);
         public static readonly StObjectField Signer = new StObjectField(nameof(Signer), 16);
-        public static readonly StObjectField Condition = new StObjectField(nameof(Condition), 20);
-        public static readonly StObjectField Fulfillment = new StObjectField(nameof(Fulfillment), 21);
-        public static readonly StObjectField Channel = new StObjectField(nameof(Channel), 22);
+        public static readonly StObjectField Majority = new StObjectField(nameof(Majority), 18);
 
         public static readonly StArrayField ArrayEndMarker = new StArrayField(nameof(ArrayEndMarker), 1);
         // ReSharper disable once RedundantArgumentNameForLiteralExpression
