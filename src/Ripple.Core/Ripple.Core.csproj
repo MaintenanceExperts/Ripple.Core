@@ -4,7 +4,7 @@
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>0.0.2</Version>
-    <Authors>MEX</Authors>
+    <Authors>Maitland Marshall</Authors>
     <Description>c# library for ripple protocol</Description>
   </PropertyGroup>
 
@@ -19,6 +19,8 @@
 
   <PropertyGroup>
     <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);GetMyPackageFiles</TargetsForTfmSpecificBuildOutput>
+    <Company>MEX</Company>
+    <RepositoryUrl>https://github.com/MaintenanceExperts/Ripple.Core</RepositoryUrl>
   </PropertyGroup>
 
   <Target Name="GetMyPackageFiles">
