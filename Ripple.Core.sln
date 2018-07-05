@@ -5,13 +5,7 @@ VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chaos.NaCl", "src\Chaos.NaCl\Chaos.NaCl.csproj", "{B46EFEF0-C3A8-4036-AF84-1FFF6E3BF06D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ripple.Address", "src\Ripple.Address\Ripple.Address.csproj", "{745E3435-01FD-4A84-AF8D-E5408CB99855}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ripple.Core", "src\Ripple.Core\Ripple.Core.csproj", "{05D075DA-B4A9-422D-84F5-D7C19E390D12}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ripple.Signing", "src\Ripple.Signing\Ripple.Signing.csproj", "{826FE9FE-C7BD-4F27-BF6C-C8596F2BBC0B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ripple.TxSigning", "src\Ripple.TxSigning\Ripple.TxSigning.csproj", "{67E2C718-35B5-466B-830A-8B1BE9CEF0AD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3667999F-1C33-429A-A993-E24D835051BA}"
 EndProject
@@ -33,22 +27,10 @@ Global
 		{B46EFEF0-C3A8-4036-AF84-1FFF6E3BF06D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B46EFEF0-C3A8-4036-AF84-1FFF6E3BF06D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B46EFEF0-C3A8-4036-AF84-1FFF6E3BF06D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{745E3435-01FD-4A84-AF8D-E5408CB99855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{745E3435-01FD-4A84-AF8D-E5408CB99855}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{745E3435-01FD-4A84-AF8D-E5408CB99855}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{745E3435-01FD-4A84-AF8D-E5408CB99855}.Release|Any CPU.Build.0 = Release|Any CPU
 		{05D075DA-B4A9-422D-84F5-D7C19E390D12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{05D075DA-B4A9-422D-84F5-D7C19E390D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05D075DA-B4A9-422D-84F5-D7C19E390D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05D075DA-B4A9-422D-84F5-D7C19E390D12}.Release|Any CPU.Build.0 = Release|Any CPU
-		{826FE9FE-C7BD-4F27-BF6C-C8596F2BBC0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{826FE9FE-C7BD-4F27-BF6C-C8596F2BBC0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{826FE9FE-C7BD-4F27-BF6C-C8596F2BBC0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{826FE9FE-C7BD-4F27-BF6C-C8596F2BBC0B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{67E2C718-35B5-466B-830A-8B1BE9CEF0AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67E2C718-35B5-466B-830A-8B1BE9CEF0AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67E2C718-35B5-466B-830A-8B1BE9CEF0AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67E2C718-35B5-466B-830A-8B1BE9CEF0AD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{71C44EA7-EA40-4F48-859F-EE4520C738A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{71C44EA7-EA40-4F48-859F-EE4520C738A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71C44EA7-EA40-4F48-859F-EE4520C738A9}.Release|Any CPU.ActiveCfg = Release|Any CPU

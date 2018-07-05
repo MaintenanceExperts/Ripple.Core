@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Ripple.Core\Ripple.Core.csproj" />
-    <ProjectReference Include="..\..\src\Ripple.Signing\Ripple.Signing.csproj" />
   </ItemGroup>
 
   <ItemGroup>

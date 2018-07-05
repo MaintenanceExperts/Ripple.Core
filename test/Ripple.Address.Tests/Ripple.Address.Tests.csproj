@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Ripple.Address\Ripple.Address.csproj" />
+    <ProjectReference Include="..\..\src\Ripple.Core\Ripple.Core.csproj" />
   </ItemGroup>
 
 </Project>

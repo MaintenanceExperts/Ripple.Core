@@ -15,8 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Chaos.NaCl\Chaos.NaCl.csproj" />
-    <ProjectReference Include="..\..\src\Ripple.Address\Ripple.Address.csproj" />
-    <ProjectReference Include="..\..\src\Ripple.Signing\Ripple.Signing.csproj" />
+    <ProjectReference Include="..\..\src\Ripple.Core\Ripple.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
